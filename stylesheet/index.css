@@ -81,23 +81,29 @@ body {
 	margin-bottom: 100px;
 }
 
-#start {
+.btn {
 	display: inline-block;
-	width: calc(5em - 4px);
+	width: calc(5em - 6px);
 	height: calc(2em - 4px);
 	text-align: center;
 	line-height: calc(2em - 4px);
-	border: #0088ff 2px solid;
-	border-radius: 0.5em;
-	background-color: #ffffff;
+	border-left: #00aaff 3px solid;
+	border-top: #00aaff 2px solid;
+	border-right: #002266 3px solid;
+	border-bottom: #002266 2px solid;
+	background-color: #0088aa;
+	color: #2b2b3b;
 }
-#start:hover {
-	background-color: #00aaff;
-}
-#start:active {
+
+.btn:active {
 	color: #eeeeee;
 	background-color: #0088bb;
+	border-left: #002266 3px solid;
+	border-top: #002266 2px solid;
+	border-right: #00aaff 3px solid;
+	border-bottom: #00aaff 2px solid;
 }
+
 #download-display {
 	margin-top: 0.5em;
 	resize: vertical;
