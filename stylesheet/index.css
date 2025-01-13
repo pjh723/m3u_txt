@@ -40,3 +40,30 @@ body {
 	width: 1.5em;
 	vertical-align: -0.3em;
 }
+
+/* Update */
+#update {
+	text-align: center;
+	padding-top: 1em;
+}
+
+#update > textarea {
+	resize: vertical;
+}
+
+#control {
+	margin-top: 1em;
+}
+
+#input-setting ul {
+	list-style-type: none;
+	text-align: left;
+	display: inline-block;
+}
+
+#output-setting ul {
+	list-style-type: none;
+	text-align: left;
+	display: inline-block;
+}
+

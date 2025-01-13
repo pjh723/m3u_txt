@@ -9,6 +9,7 @@
 <div id="body">
 	<div id="title" class="module">
 		<h2>TVConvert直播源转换工具</h2>
+
 		<span id="link">
 			<a href="https://github.com/Twisuki/TVConvert">
 				<img src="src/github.png" alt="Github">
@@ -22,14 +23,68 @@
 		</span>
 	</div>
 
-	<div id="input" class="module">
+	<div id="update" class="module">
 		<input type="file" id="update-file">
 		<br>
-		<textarea id="update-display"></textarea>
+		<label for="update-display"></label>
+		<textarea id="update-display" rows="10" cols="50" readonly>Update your file here ...</textarea>
+
+		<div id="control">
+			<div id="input-setting">
+				输入文件格式
+				<br>
+				<ul>
+					<li>
+						<input type="radio" name="input-format" id="input-format-auto" value="auto">
+						<label for="input-format-auto">自动检测</label>
+					</li>
+
+					<li>
+						<input type="radio" name="input-format" id="input-format-dpl" value="dpl">
+						<label for="input-format-dpl">.dpl PotPlayer播放列表</label>
+					</li>
+
+					<li>
+						<input type="radio" name="input-format" id="input-format-m3u" value="m3u">
+						<label for="input-format-m3u">.m3u 媒体播放列表</label>
+					</li>
+
+					<li>
+						<input type="radio" name="input-format" id="input-format-m3u8" value="m3u">
+						<label for="input-format-m3u8">.m3u8 媒体播放列表</label>
+					</li>
+				</ul>
+			</div>
+			<div id="output-setting">
+				转换文件格式
+				<br>
+				<ul>
+					<li>
+						<input type="radio" name="output-format" id="output-format-auto" value="auto">
+						<label for="output-format-auto">.json</label>
+					</li>
+
+					<li>
+						<input type="radio" name="output-format" id="output-format-dpl" value="dpl">
+						<label for="output-format-dpl">.dpl PotPlayer播放列表</label>
+					</li>
+
+					<li>
+						<input type="radio" name="output-format" id="output-format-m3u" value="m3u">
+						<label for="output-format-m3u">.m3u 媒体播放列表</label>
+					</li>
+
+					<li>
+						<input type="radio" name="output-format" id="output-format-m3u8" value="m3u">
+						<label for="output-format-m3u8">.m3u8 媒体播放列表</label>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
-	<div id="output" class="module">
-
+	<div id="download" class="module">
+		<div id="start">开始转换</div>
 	</div>
 </div>
 </body>
