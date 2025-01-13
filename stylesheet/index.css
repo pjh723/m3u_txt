@@ -1,1 +1,42 @@
 /* Index Stylesheet */
+body {
+	background-color: #c8edf8;
+}
+
+#body {
+	width: 40vw;
+	min-width: 25em;
+	margin-left: 30vw;
+	margin-right: 30vw;
+}
+
+.module {
+	background-color: #ffffff;
+	margin-top: 2em;
+	border-radius: 2em;
+}
+
+/* Title */
+#title {
+	text-align: center;
+}
+#title > h2 {
+	width: 100%;
+	text-align: center;
+	padding-top: 1em;
+}
+
+#link {
+	display: inline-block;
+	padding-bottom: 1em;
+	text-align: left;
+}
+
+#link > a {
+	color: #0088ff;
+}
+
+#link > a > img {
+	width: 1.5em;
+	vertical-align: -0.3em;
+}
