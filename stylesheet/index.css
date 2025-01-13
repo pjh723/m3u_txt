@@ -42,13 +42,13 @@ body {
 	vertical-align: -0.3em;
 }
 
-/* Update */
-#update {
+/* Upload */
+#Upload {
 	text-align: center;
 	padding-top: 1em;
 }
 
-#update > textarea {
+#Upload > textarea {
 	margin-top: 0.5em;
 	resize: vertical;
 }
