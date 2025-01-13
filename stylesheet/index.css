@@ -20,6 +20,7 @@ body {
 #title {
 	text-align: center;
 }
+
 #title > h2 {
 	width: 100%;
 	text-align: center;
@@ -48,6 +49,7 @@ body {
 }
 
 #update > textarea {
+	margin-top: 0.5em;
 	resize: vertical;
 }
 
@@ -59,11 +61,44 @@ body {
 	list-style-type: none;
 	text-align: left;
 	display: inline-block;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 #output-setting ul {
 	list-style-type: none;
 	text-align: left;
 	display: inline-block;
+	padding-left: 0;
+	padding-right: 0;
 }
 
+
+/* Download */
+#download {
+	text-align: center;
+	padding-top: 1em;
+	margin-bottom: 100px;
+}
+
+#start {
+	display: inline-block;
+	width: calc(5em - 4px);
+	height: calc(2em - 4px);
+	text-align: center;
+	line-height: calc(2em - 4px);
+	border: #0088ff 2px solid;
+	border-radius: 0.5em;
+	background-color: #ffffff;
+}
+#start:hover {
+	background-color: #00aaff;
+}
+#start:active {
+	color: #eeeeee;
+	background-color: #0088bb;
+}
+#download-display {
+	margin-top: 0.5em;
+	resize: vertical;
+}
