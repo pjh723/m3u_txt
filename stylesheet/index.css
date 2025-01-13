@@ -83,25 +83,22 @@ body {
 
 .btn {
 	display: inline-block;
-	width: calc(5em - 6px);
-	height: calc(2em - 4px);
+	width: calc(5em - 2px);
+	height: calc(2em - 2px);
 	text-align: center;
-	line-height: calc(2em - 4px);
-	border-left: #00aaff 3px solid;
-	border-top: #00aaff 2px solid;
-	border-right: #002266 3px solid;
-	border-bottom: #002266 2px solid;
-	background-color: #0088aa;
+	line-height: calc(2em - 2px);
 	color: #2b2b3b;
+	border: 1px #2b2b3b solid;
+	border-radius: 0.5em;
+	background-color: #f0f0f0;
+}
+
+.btn:hover {
+	background-color: #e0e0e0;
 }
 
 .btn:active {
-	color: #eeeeee;
-	background-color: #0088bb;
-	border-left: #002266 3px solid;
-	border-top: #002266 2px solid;
-	border-right: #00aaff 3px solid;
-	border-bottom: #00aaff 2px solid;
+	background-color: #ffffff;
 }
 
 #download-display {
