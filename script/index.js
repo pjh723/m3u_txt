@@ -3,7 +3,7 @@ const FileFormatList = [
 	"dpl", "m3u", "m3u8"
 ];
 
-var fileExtension, fileText, fileConvert;
+let fileExtension, fileText, fileConvert;
 
 // Upload
 const fileUpload = document.getElementById("upload-file");
@@ -43,3 +43,18 @@ function getFileExtension(fileName) {
 }
 
 // Start
+const startBtn = document.getElementById("start");
+startBtn.addEventListener("click", function () {
+	fileConvert = null;
+	let outputFormatRadios = document.getElementsByName("output-format");
+	for (const element of outputFormatRadios) {
+		if (element.checked) {
+			fileConvert = element.value;
+			break;
+		}
+	}
+
+	if (fileConvert) {
+		console.log(fileConvert);
+	}
+});
