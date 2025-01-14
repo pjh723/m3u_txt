@@ -1,9 +1,5 @@
 // File Format
-const FileFormatList = [
-	"dpl", "m3u", "m3u8"
-];
-
-let fileExtension, fileText, fileConvert;
+let fileName, fileText, fileExtension, fileConvert;
 
 // Upload
 const fileUpload = document.getElementById("upload-file");
@@ -12,7 +8,6 @@ fileUpload.addEventListener("change", function () {
 
 	textArea.value = "文件读取中 ...";
 
-	fileExtension = getFileExtension(fileUpload.files[0].name);
 	const reader = new FileReader();
 
 	reader.onload = function (event) {
@@ -27,34 +22,58 @@ fileUpload.addEventListener("change", function () {
 
 	if (fileUpload.files && fileUpload.files[0]) {
 		reader.readAsText(fileUpload.files[0]);
+		fileName = fileUpload.files[0].name;
+		autoGetFileExtension();
 	}
 });
 
-function getFileExtension(fileName) {
-	const lastDotIndex = fileName.lastIndexOf('.');
-	let extension = '';
+// Set file extension
+function autoGetFileExtension() {
+	const lastDotIndex = fileName.lastIndexOf(".");
+	let extension = "";
 	if (lastDotIndex > -1 && lastDotIndex < fileName.length - 1) {
 		extension = fileName.substring(lastDotIndex + 1);
 	}
 
 	const extensionSpan = document.getElementById("input-format-auto-extension");
 	extensionSpan.innerHTML = extension;
+
 	return extension;
 }
 
 // Start
 const startBtn = document.getElementById("start");
 startBtn.addEventListener("click", function () {
-	fileConvert = null;
-	let outputFormatRadios = document.getElementsByName("output-format");
-	for (const element of outputFormatRadios) {
-		if (element.checked) {
-			fileConvert = element.value;
-			break;
+	if (!fileName) {
+		window.alert("未上传文件");
+	} else {
+		fileExtension = null;
+		let inputFormatRadios = document.getElementsByName("input-format");
+		if (inputFormatRadios[0].checked) {
+			fileExtension = autoGetFileExtension();
+		} else {
+			for (const element of inputFormatRadios) {
+				if (element.checked) {
+					fileExtension = element.value;
+					break;
+				}
+			}
 		}
-	}
 
-	if (fileConvert) {
-		console.log(fileConvert);
+
+		fileConvert = null;
+		let outputFormatRadios = document.getElementsByName("output-format");
+		for (const element of outputFormatRadios) {
+			if (element.checked) {
+				fileConvert = element.value;
+				break;
+			}
+		}
+
+		if (fileExtension && fileConvert) {
+			console.log(fileExtension + " => " + fileConvert);
+		} else {
+			window.alert("未选择输出格式");
+		}
 	}
 });
