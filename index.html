@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="stylesheet/index.css">
+	<script src="script/convert.js"></script>
+	<title>TVConvert直播源格式转换工具 - Twisuki</title>
+</head>
+<body>
+<div id="body">
+	<div id="title" class="module">
+		<h2>TVConvert直播源格式转换工具</h2>
+
+		<span id="link">
+			<a href="https://github.com/pjh723/">
+				<img src="src/github.png" alt="m3u_txt">
+				github仓库
+			</a>
+			<br>
+			<a href="https://github.com/pjh723">
+				<img src="src/Twisuki.png" alt="pjh723">
+				pjh723
+			</a>
+		</span>
+	</div>
+
+	<div id="upload" class="module">
+		<input type="file" id="upload-file">
+		<br>
+		<label for="upload-display"></label>
+		<textarea id="upload-display" rows="10" cols="50" readonly>Upload your file here ...</textarea>
+
+		<div id="control">
+			<div id="input-setting">
+				输入文件格式
+				<br>
+				<ul>
+					<li>
+						<input type="radio" name="input-format" id="input-format-auto" value="auto" checked>
+						<label for="input-format-auto">自动检测 <span id="input-format-auto-extension">...</span></label>
+					</li>
+
+					<li>
+						<input type="radio" name="input-format" id="input-format-dpl" value="dpl">
+						<label for="input-format-dpl">.dpl PotPlayer播放列表</label>
+					</li>
+
+					<li>
+						<input type="radio" name="input-format" id="input-format-m3u" value="m3u">
+						<label for="input-format-m3u">.m3u 媒体播放列表</label>
+					</li>
+
+					<li>
+						<input type="radio" name="input-format" id="input-format-m3u8" value="m3u">
+						<label for="input-format-m3u8">.m3u8 媒体播放列表</label>
+					</li>
+				</ul>
+			</div>
+			<div id="output-setting">
+				转换文件格式
+				<br>
+				<ul>
+					<li>
+						<input type="radio" name="output-format" id="output-format-auto" value="json">
+						<label for="output-format-auto">.json</label>
+					</li>
+
+					<li>
+						<input type="radio" name="output-format" id="output-format-dpl" value="dpl">
+						<label for="output-format-dpl">.dpl PotPlayer播放列表</label>
+					</li>
+
+					<li>
+						<input type="radio" name="output-format" id="output-format-m3u" value="m3u">
+						<label for="output-format-m3u">.m3u 媒体播放列表</label>
+					</li>
+
+					<li>
+						<input type="radio" name="output-format" id="output-format-m3u8" value="m3u">
+						<label for="output-format-m3u8">.m3u8 媒体播放列表</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="download" class="module">
+		<div id="start" class="btn">开始转换</div>
+		<div id="down" class="btn">文件下载</div>
+		<br>
+		<label for="download-display"></label>
+		<textarea id="download-display" rows="10" cols="50" readonly>Waiting for converting ...</textarea>
+		<a href="" download=""></a>
+	</div>
+</div>
+<script src="script/index.js"></script>
+</body>
+</html>
